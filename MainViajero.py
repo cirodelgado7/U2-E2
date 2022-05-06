@@ -1,15 +1,13 @@
-from ManejadorViajero import Manejador
 from MenuViajero import Menu
 
 if __name__ == '__main__':
     mv = Manejador()
-    mv.testViajeros()
-    print('\n ***** Lista de Viajeros Frecuentes *****')
     print(mv)
+    mv.testViajeros()
     n = int(input('Numero de Viajero: '))
     while True:
         try:
-            if n in range(1000,1010):
+            if n in range(200, 219):
                 i = mv.buscarViajero(n)
                 k = mv.obtenerViajero(i)
                 menu = Menu()
@@ -27,7 +25,7 @@ if __name__ == '__main__':
         print(" 3 - Canjear millas")
         print(" 4 - Salir")
         op = int(input('Ingrese una opcion: '))
-        if op in range(1,5):
-            menu.opcion(op,k)
+        if op in range(1, 5):
+            menu.opcion(op, k)
         else:
             print('Opción no valida - Elija nuevamente la opción')
